@@ -4,24 +4,27 @@
 	<meta charset="utf-8">
 	<title>Trignometry</title>
 	<script type="text/javascript" src="d3/d3.v3.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
+<!-- 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+--></head>
 <body>
 
-	<form id="lengths">
-		<label>Length A</label>
-		<div class="length-a">
-			<input type="text" name="length-a">
-		</div>
-		<label>Length B</label>
-		<div class="length-b">
-			<input type="text" name="length-b">
-		</div>
-	</form>
+	<label>Length A</label>
+	<div>
+		<input id="length-a" type="text">
+	</div>
 
-	<button type="submit" form="lengths" value="Submit">Submit</button>
+	<label>Length B</label>
+	<div >
+		<input id="length-b" type="text">
+	</div>
 
-	<script type="text/javascript" src="trig.js" >
+	<button value="Submit" onclick="trig.buildPath()">Build</button>
+	
+	<div >
+		<input id="path" type="text">
+	</div>
+
+	<script type="text/javascript" src="js/trig.js" >
 	</script>
 </body>
 </html>  
