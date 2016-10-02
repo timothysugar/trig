@@ -5,4 +5,9 @@ describe('trig', function(){
 		expect(pathString).toBe('m 1 2 m 3 4 z');
 	})
 
+	it('should return a path string formatted for a triangle', function() {
+		var pathString = toTrianglePath(5, 6, 7, 8);
+		expect(pathString).toBe('m 5 6 m 7 8 z');
+	})
+
 })
