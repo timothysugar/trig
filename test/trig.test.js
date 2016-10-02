@@ -16,4 +16,13 @@ describe('trig', function(){
 		var pathString = toTrianglePath(-1, -2, -3, -4);
 		expect(pathString).toBe('m -1 -2 m -3 -4 z');
 	});
+
+	it('should throw exception for strings', function() {
+		var pathString = 
+		expect(
+			function() {
+				toTrianglePath("a", 2, 3, 4); 
+			})
+		.toThrow(new Error('Invalid input. Should be numeric values.'));
+	})
 })
