@@ -1,12 +1,19 @@
-'use strict'
+var trig = (function () {
+	'use strict' 
 
-function toTrianglePath(a, b, c, d) {
-	if (isNumber(a) && isNumber(b) && isNumber(c) && isNumber(d)) {
-		return 'm ' + a + ' ' + b + ' m ' + c + ' ' + d + ' ' + 'z';
+	function _toTrianglePath(a, b, c, d) {
+		if (_isNumber(a) && _isNumber(b) && _isNumber(c) && _isNumber(d)) {
+			return 'm ' + a + ' ' + b + ' m ' + c + ' ' + d + ' ' + 'z';
+		}
+		throw new Error('Invalid input. Should be numeric values.');
 	}
-	throw new Error('Invalid input. Should be numeric values.');
-}
 
-function isNumber(input) {
-	return (typeof input === 'number');
-}
+	function _isNumber(input) {
+		return (typeof input === 'number');
+	}
+
+	return {
+		toTrianglePath: _toTrianglePath
+	};
+
+})();
